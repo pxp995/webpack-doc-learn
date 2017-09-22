@@ -1,0 +1,23 @@
+{
+  "name": "webpack-doc-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxp995/webpack-doc-learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pxp995/webpack-doc-learn/issues"
+  },
+  "homepage": "https://github.com/pxp995/webpack-doc-learn#readme",
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
+}
