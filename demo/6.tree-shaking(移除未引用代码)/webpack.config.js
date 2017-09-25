@@ -21,7 +21,7 @@ module.exports = {
     },
     plugins: [
         new htmlWebpackPlugin({
-            title:'代码分离'
+            title:'tree shaking'
         }),
         new cleanWebpackPlugin(['dist']),
         // 热替换插件

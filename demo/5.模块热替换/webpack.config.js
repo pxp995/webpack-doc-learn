@@ -19,7 +19,7 @@ module.exports = {
     },
     plugins: [
         new htmlWebpackPlugin({
-            title:'管理输出'
+            title:'模块热替换'
         }),
         new cleanWebpackPlugin(['dist']),
         // 热替换插件

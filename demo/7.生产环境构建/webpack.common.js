@@ -1,33 +1,21 @@
+// 放公用的东西
 const path = require('path');
 // 自动生成html模版
 const htmlWebpackPlugin = require('html-webpack-plugin');
 // 清除／.dist文件夹
 const cleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
-// 精简输出
-const uglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     entry: {
         app: './src/index.js',
         // printf: './src/printf.js'
     },
-    devtool: 'inline-source-map',
-    // 配置开发服务器，传递参数为1.服务器所在目录；2.进行压缩；3.监听端口号
-    devServer: {
-        contentBase: './dist',
-        compress: true,
-        port: 9090,
-        hotOnly: true
-    },
     plugins: [
         new htmlWebpackPlugin({
-            title:'代码分离'
+            title:'生产环境配置'
         }),
         new cleanWebpackPlugin(['dist']),
-        // 热替换插件
-        new webpack.HotModuleReplacementPlugin(),
-        // 精简输出，移除未引用代码，压缩代码
-        new uglifyJSPlugin()
+        new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         filename: '[name].bundle.js',

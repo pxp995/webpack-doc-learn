@@ -17,7 +17,7 @@ module.exports = {
     },
     plugins: [
         new htmlWebpackPlugin({
-            title:'管理输出'
+            title:'开发环境'
         }),
         new cleanWebpackPlugin(['dist'])
     ],
