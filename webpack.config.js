@@ -53,16 +53,19 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
+                // 表示只对src下的文件进行构建，提高性能
+                include: path.resolve(__dirname, 'src'),
                 use: ['style-loader', 'css-loader']
             },
             // 支持es6
-            // {
-            //     test: /\.js$/,
-            //     loader: 'babel-loader',
-            //     query: {
-            //         presets: ['es2015']
-            //     }
-            // }
+            {
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'src'),
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015']
+                }
+            }
         ]
     }
 };
